@@ -1,12 +1,10 @@
 import java.util.Scanner;
 
-// Class definition
 class Student {
     String name;
     int rollNumber;
     float marks;
 
-    // Accept Scanner as parameter to avoid creating multiple scanners
     void inputDetails(Scanner sc) {
         System.out.print("Enter name: ");
         name = sc.nextLine();
@@ -17,7 +15,7 @@ class Student {
         System.out.print("Enter marks: ");
         marks = sc.nextFloat();
 
-        sc.nextLine();  // consume the leftover newline after nextFloat()
+        sc.nextLine(); 
     }
 
     void displayDetails() {
@@ -30,8 +28,7 @@ class Student {
 
 public class StudentDemo {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);  // Create one Scanner for the entire program
-
+        Scanner sc = new Scanner(System.in);  
         Student student1 = new Student();
         Student student2 = new Student();
 
@@ -45,6 +42,6 @@ public class StudentDemo {
         student1.displayDetails();
         student2.displayDetails();
 
-        sc.close();  // Close scanner once after all inputs are done
+        sc.close(); 
     }
 }
